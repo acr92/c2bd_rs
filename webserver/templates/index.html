@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Countdown</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
 <body>
-    <h1>Countdown - Days, excl. vacation</h1>
-    <h2>{{days_left}}</h2>
-
-
-    <h4>Business days: {{business_days_left}}</h4>
+<header>
+<h1>Countdown</h1>
+</header>
+<main>
+    <h2 style="text-align: center">{{days_left}}</h2>
+    <p style="text-align: center">Business Days, excluding vacation days</p>
+</main>
+<footer>
+    <h2 style="text-align: center">{{business_days_left}}</h2>
+    <p style="text-align: center">Business Days</p>
+</footer>
 </body>
 </html>
