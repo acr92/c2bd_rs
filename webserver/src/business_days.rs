@@ -48,6 +48,8 @@ fn populate_vacation_days(business_days_exclude_vacation: &mut BusinessDays) {
     business_days_exclude_vacation
         .exclude_day(DateTime::parse_from_rfc3339("2023-05-01T00:00:00+00:00").unwrap());
     business_days_exclude_vacation
+        .exclude_day(DateTime::parse_from_rfc3339("2023-05-05T00:00:00+00:00").unwrap());
+    business_days_exclude_vacation
         .exclude_day(DateTime::parse_from_rfc3339("2023-05-17T00:00:00+00:00").unwrap());
     business_days_exclude_vacation
         .exclude_day(DateTime::parse_from_rfc3339("2023-05-18T00:00:00+00:00").unwrap());
