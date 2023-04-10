@@ -21,4 +21,4 @@ members = [
 
 [workspace.dependencies]
 actix-web = "4.3.1"
-chrono = "0.4.24"
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
