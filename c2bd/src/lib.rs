@@ -21,7 +21,7 @@ impl BusinessDays {
 
     pub fn calculate(&self) -> i32 {
         let mut business_days = 0;
-        let mut current_date = self.start_date.clone();
+        let mut current_date = self.start_date;
         while current_date <= self.end_date {
             business_days += match current_date.weekday() {
                 Weekday::Sat | Weekday::Sun => 0,

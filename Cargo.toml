@@ -6,8 +6,17 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web = { workspace = true }
+tokio = { version = "1.27.0", features = ["rt-multi-thread", "macros"] }
+webserver = { path = "./webserver" }
+env_logger = "0.10.0"
+log = "0.4.17"
 
 [workspace]
 members = [
-    "c2bd"
+    "c2bd",
+    "webserver",
 ]
+
+[workspace.dependencies]
+actix-web = "4.3.1"
