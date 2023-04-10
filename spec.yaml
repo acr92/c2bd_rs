@@ -1,0 +1,27 @@
+name: c2bd
+region: fra
+services:
+  - name: c2bd
+    dockerfile_path: Dockerfile
+    source_dir: .
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: acr92/c2bd_rs
+    health_check:
+      http_path: /health
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
+    envs:
+      - key: BIND_ADDRESS
+        scope: RUN_TIME
+        value: 0.0.0.0
+      - key: PORT
+        scope: RUN_TIME
+        value: 8080
+      - key: TARGET_DATE
+        scope: RUN_TIME
+        value: 2023-05-31T17:00:00+02:00
